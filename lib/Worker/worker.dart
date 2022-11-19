@@ -23,11 +23,11 @@ class worker {
       //Getting Temp,Humidity
       Map temp_data = data['main'];
       String getHumidity = temp_data['humidity'].toString();
-      double getTemp = temp_data['temp'];
+      double getTemp = temp_data['temp'] - 273.15;
 
 //Getting air_speed
       Map wind = data['wind'];
-      double getAir_speed = wind["speed"];
+      double getAir_speed = wind["speed"]/0.27777777777778;
 
       //Getting Description
       List weather_data = data['weather'];
